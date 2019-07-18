@@ -12,7 +12,8 @@
         <p>{{$post->content}}</p>
         <footer class="blockquote-footer">
           <cite title="Source Title">{{$post->author}}</cite>
-          <small>{{$post->updated_at}}</small>
+          <small class="ml-2">{{$post->created_at}}</small>
+          <a class="btn btn-primary btn-lg float-right" href="{{route ('posts.show', $post->slug)}}" role="button">Guarda Post</a>
         </footer>
       </blockquote>
     </div>
