@@ -15,4 +15,16 @@ class PostController extends Controller
     }
     return view('posts.show', compact('post'));
   }
+
+  public function postInCategory($slug){
+    $category=Category::where('slug',$slug)->first();
+    if (empty($category)) {
+      abort(404);
+    }
+    $posts = $category->posts;
+    return view('posts.category')->with([
+      'posts'=> $posts,
+      'category'=> $category
+    ]);
+  }
 }
