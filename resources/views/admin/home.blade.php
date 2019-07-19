@@ -27,8 +27,8 @@
         <td>{{$post->slug}}</td>
         <td>{{$post->category->name}}</td>
         <td>
-          <a class="btn btn-warning" href="" role="button">Modifica Post</a>
-          <form class="list-group-item list-group-item-action p-0" action="{{route ('admin.posts.destroy', $post->id)}}" method="post">
+          <a class="btn btn-warning" href="{{route ('admin.posts.edit', $post->id)}}" role="button">Modifica Post</a>
+          <form method="POST" class="list-group-item list-group-item-action p-0" action="{{route ('admin.posts.destroy', $post->id)}}" >
             @method('DELETE')
             @csrf
             <input type="submit" class="btn btn-danger"value="Elimina Post">
