@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Boolpress - Home')
 @section('content')
 <div class="container d-flex flex-column">
   <h1 class="my-2">POST RECENTI</h1>

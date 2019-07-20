@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Boolpress - Show Post')
 @section('content')
 <div class="container">
   <div class="jumbotron">

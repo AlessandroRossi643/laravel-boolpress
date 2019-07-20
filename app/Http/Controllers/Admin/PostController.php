@@ -27,7 +27,8 @@ class PostController extends Controller
         'title'=>'required|max:255|bail',
         'content'=> 'required',
         'author'=> 'required',
-        'slug'=>'required'
+        'slug'=>'required',
+        'category_id'=>'required'
       ];
       $messages=[
         'title.required'=>'Inserisci il titolo',
@@ -35,6 +36,7 @@ class PostController extends Controller
         'content.required'=>'Inserisci il contenuto',
         'author.required'=>'Inserisci l\'autore',
         'slug.required'=>'Inserisci lo slug',
+        'category_id.required'=>'Seleziona la categoria'
       ];
       $validatedData=$request->validate($rules,$messages);
 
@@ -70,7 +72,8 @@ class PostController extends Controller
         'title'=>'required|max:255|bail',
         'content'=> 'required',
         'author'=> 'required',
-        'slug'=>'required'
+        'slug'=>'required',
+        'category_id'=>'required'
       ];
       $messages=[
         'title.required'=>'Inserisci il titolo',
@@ -78,6 +81,7 @@ class PostController extends Controller
         'content.required'=>'Inserisci il contenuto',
         'author.required'=>'Inserisci l\'autore',
         'slug.required'=>'Inserisci lo slug',
+        'category_id.required'=>'Seleziona la categoria'
       ];
       $validatedData=$request->validate($rules,$messages);
 

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Boolpress - Show posts for category')
 @section('content')
 <div class="container d-flex flex-column">
   <h1 class="my-2">CATEGORIA: {{$category->name}}</h1>

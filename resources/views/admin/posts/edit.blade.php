@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Boolpress - Modifica post')
 @section('content')
 <div class="container">
   <form method="POST" action="{{route('admin.posts.update',$posts->id)}}"> @method('PUT')
@@ -37,6 +38,9 @@
       <option value="{{ $category->id }}">{{ $category->name }}</option>
       @endforeach
     </select>
+    @error ('category_id')
+    <div class="alert alert-danger" role="alert">{{$message}}</div>
+    @enderror
     <button type="submit" class="btn btn-primary mt-4">Modifica Post</button>
   </form>
 </div>

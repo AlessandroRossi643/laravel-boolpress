@@ -1,9 +1,10 @@
 @extends('layouts.app')
-
+@section('title', 'Boolpress - Pannello di controllo')
 @section('content')
 <div class="container">
   <h2>PANNELLO DI CONTROLLO</h2>
   <a href="{{route ('admin.posts.create')}}" class="list-group-item list-group-item-action">Crea nuovo Post</a>
+  <a href="{{route ('admin.categories.create')}}" class="list-group-item list-group-item-action">Crea nuovo categoria</a>
 
   <table class="table table-hover">
     <thead>
